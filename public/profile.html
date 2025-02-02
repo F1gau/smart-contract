@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой Профиль</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Главная</a></li>
+                <li><a href="profile.html">Мой Профиль</a></li>
+                <li><a href="logout.html">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="profile-container">
+        <h1>Мой Профиль</h1>
+        <div class="profile-info">
+            <img id="profile-avatar" src="default-avatar.png" alt="Аватар">
+            <input type="file" id="avatar-upload" accept="image/*">
+            <button id="save-avatar" class="btn">Сохранить аватар</button>
+        </div>
+
+        <!-- Форма для изменения пароля и электронной почты -->
+        <div class="update-info">
+            <h2>Изменить данные профиля</h2>
+            <form id="update-profile-form">
+                <label for="new-email">Новая эл. почта</label>
+                <input type="email" id="new-email" placeholder="Введите новую эл. почту">
+                
+                <label for="current-password">Текущий пароль</label>
+                <input type="password" id="current-password" placeholder="Введите текущий пароль">
+                
+                <label for="new-password">Новый пароль</label>
+                <input type="password" id="new-password" placeholder="Введите новый пароль">
+
+                <button type="submit" class="btn">Сохранить изменения</button>
+            </form>
+        </div>
+
+        <div id="message"></div> <!-- Для вывода сообщения о результате действия -->
+
+        <div class="history">
+            <h2>История сделок</h2>
+            <ul id="transaction-history">
+                <li>Сделка 1: Покупка</li>
+                <li>Сделка 2: Продажа</li>
+                <li>Сделка 3: Обмен</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

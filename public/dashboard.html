@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смарт-контракты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Главная</a></li>
+                <li><a href="profile.html">Мой Профиль</a></li>
+                <li><a href="logout.html">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1>Список смарт-контрактов</h1>
+
+        <div class="filters">
+            <input type="text" id="search" placeholder="Поиск по наименованию...">
+            <select id="contractType">
+                <option value="">Тип сделки</option>
+                <option value="exchange">Обмен</option>
+                <option value="sale">Продажа</option>
+                <option value="purchase">Покупка</option>
+            </select>
+        </div>
+
+        <div class="contracts" id="contracts-list">
+            <!-- Карточки смарт-контрактов -->
+        </div>
+
+        <!-- Список цен криптовалют -->
+        <div class="crypto-prices">
+            <h3>Текущие цены на криптовалюты</h3>
+            <p>Bitcoin: <span id="btc-price">Загрузка...</span></p>
+            <p>Ethereum: <span id="eth-price">Загрузка...</span></p>
+        </div>
+    </div>
+
+    <script src="contracts.js"></script>
+    <script src="cryptoPrices.js"></script>
+</body>
+</html>
